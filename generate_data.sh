@@ -3,10 +3,12 @@
 #This is fun! Yay!
 
 #touch data1.txt
-cat data1.txt
-for i in {1..10}
-let j=i+1
-do 
+#cat data1.txt
+for i in {1..10}; do
+    let j=i+1
     echo $i $j  >> data1.txt
-done 
-
+     # Method for print/ debug echo $i $j 
+done
+# You have to send the stuff from data1.txt to temp, you need a standard input  
+awk '{print $1, $2^2}' data1.txt > tmp
+mv tmp data1.txt 
