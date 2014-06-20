@@ -5,7 +5,8 @@
 #touch data1.txt
 cat data1.txt
 for i in {1..10}
+let j=i+1
 do 
-    echo $i >> data1.txt
+    echo $i $j  >> data1.txt
 done 
 
